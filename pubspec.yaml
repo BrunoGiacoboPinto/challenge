@@ -1,0 +1,10 @@
+name: challange
+description: A computer science assessment for non computer science graduates.
+version: 0.0.1
+
+environment:
+  sdk: '>=2.17.6 <3.0.0'
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
