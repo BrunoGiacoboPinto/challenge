@@ -1,5 +1,7 @@
 # A computer science assessment for non computer science graduates
 
+[![Validate Challange](https://github.com/BrunoGiacoboPinto/challange/actions/workflows/dart.yml/badge.svg)](https://github.com/BrunoGiacoboPinto/challange/actions/workflows/dart.yml)
+
 This test is comprised of a practical part as well as a theoretical part. In the first part,
 one must fill in the missing implementation for all functions, extensions or classes  
 located under `lib/src` folder. More details are provided as documentation.
