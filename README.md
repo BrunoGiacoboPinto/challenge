@@ -23,5 +23,5 @@ Good luck.
 The following markdown files contain several questions for a wide range of topics.
 
 * [Flutter](https://github.com/BrunoGiacoboPinto/challange/blob/main/exam/flutter.md)
-* [Flutter](https://github.com/BrunoGiacoboPinto/challange/blob/main/exam/general.md)
+* [Computing](https://github.com/BrunoGiacoboPinto/challange/blob/main/exam/general.md)
   
