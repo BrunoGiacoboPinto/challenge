@@ -1,4 +1,4 @@
-import 'package:challange/challange.dart';
+import 'package:challenge/challenge.dart';
 import 'package:test/test.dart';
 
 void main() {

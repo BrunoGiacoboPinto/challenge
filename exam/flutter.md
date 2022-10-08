@@ -7,7 +7,7 @@
 
 3) Diga em qual situação o seguinte código pode incorre em um erro, explique o porquê:
 
-```{dart}
+```dart
 class ProblematicWidget extends StatefulWidget {
   const ProblematicWidget({Key? key}) : super(key: key);
 
@@ -22,8 +22,10 @@ class _ProblematicWidgetState extends State<ProblematicWidget> {
   void initState() {
     super.initState();
 
-    setState(() {
-      value += 313;
+    Future<void>.delayed(const Duration(milliseconds: 500), () {
+      setState(() {
+        value += 313;
+      });
     });
   }
 
@@ -36,13 +38,13 @@ class _ProblematicWidgetState extends State<ProblematicWidget> {
 }
 ```
 
-4) É possível passar um `Scaffold` para o oarâmetro body de outro `Scaffold`? Quais problemas essa construção poderia causar?
+4) É possível passar um `Scaffold` para o parâmetro body de outro `Scaffold`? Quais problemas essa construção poderia causar?
 
-5) Explique a função das `keys` que são passada para os construtores dos widgets em Flutter.
+5) Explique a função das `keys` que são passada para os construtores dos `Widgets` em Flutter.
 
-6) Em termos de performance e corretude, explique quais são os problemas do pseudo-código abaixo?
+6) Explique, em suas palavras, quais são os problemas do pseudo-código abaixo?
 
-```{dart}
+```dart
 class NetworkService {
   Future<String> apiCall() async {
     // ..
@@ -69,5 +71,4 @@ class _ProblematicWidgetState extends State<ProblematicWidget> {
     );
   }
 }
-
 ```

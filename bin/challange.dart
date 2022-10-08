@@ -1,5 +1,5 @@
-import 'package:challange/challange.dart' as challange;
+import 'package:challenge/challenge.dart' as challenge;
 
 void main(List<String> arguments) {
-  print(challange.description);
+  print(challenge.description);
 }
