@@ -1,5 +1,3 @@
-import 'dart:math';
-
 /// Encontrar o maior elemento em uma lista
 ///
 /// Desafio 1: preencha a implementação da função a baixo de modo a encontrar o maior
@@ -27,15 +25,9 @@ int maxElement(List<int> data, int start, int end) {
     return data[end];
   }
 
-  int calculateMax(int maxValue, int nextIndex) {
-    final value = max<int>(maxValue, data[nextIndex]);
-
-    if (nextIndex == end) {
-      return value;
-    } else {
-      return calculateMax(value, nextIndex + 1);
-    }
+  if (data[start] < data[start + 1]) {
+    return maxElement(data.sublist(start + 1), 0, end - 1);
+  } else {
+    return maxElement([data[start], ...data.sublist(start + 2)], 0, end - 1);
   }
-
-  return calculateMax(data[start], start + 1);
 }
