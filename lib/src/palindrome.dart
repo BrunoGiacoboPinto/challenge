@@ -4,7 +4,7 @@
 /// se a `String` alvo é ou não um palíndromo.
 ///
 /// Sua implementação deverá passar em todos os casos de teste definidos pelo arquivo `test/challenge_test.dart`.
-/// 
+///
 /// Considerações:
 ///
 /// - Tente criar uma implementação que privilegie performance do ponto de vista de execução.
@@ -15,6 +15,18 @@
 ///
 extension PalindromeExtension on String {
   bool get isPalindrome {
-    throw UnimplementedError('Você deve implementar esse getter');
+    int start = 0;
+    int end = length - 1;
+    String word = this;
+
+    while (start < end) {
+      if (word[start] != word[end]) {
+        return false;
+      } else {
+        start++;
+        end--;
+      }
+    }
+    return true;
   }
 }
