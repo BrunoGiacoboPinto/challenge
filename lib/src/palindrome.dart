@@ -4,7 +4,7 @@
 /// se a `String` alvo é ou não um palíndromo.
 ///
 /// Sua implementação deverá passar em todos os casos de teste definidos pelo arquivo `test/challenge_test.dart`.
-/// 
+///
 /// Considerações:
 ///
 /// - Tente criar uma implementação que privilegie performance do ponto de vista de execução.
@@ -15,6 +15,15 @@
 ///
 extension PalindromeExtension on String {
   bool get isPalindrome {
-    throw UnimplementedError('Você deve implementar esse getter');
+    // Eu primeiro fiz essa solução... deu certo? Deu. Mas acho que não é tao performático.
+    // O split eu fui olhar a implementação e ele usa um trem que eu nao faço a minima ideia do que é
+    // usando uma lib do JS. O reversed inverte a lista, que eu imagino que não deva ser um processo
+    // barato, e o join faz o uso do while.. Então decidi tentar outra abordagem.
+    String reverse = split('').reversed.join('');
+    if (reverse == this) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
