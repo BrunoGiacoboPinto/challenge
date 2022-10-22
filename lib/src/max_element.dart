@@ -5,7 +5,7 @@
 /// indicar o primeiro e último índice válido da lista, iniciando em zero.
 ///
 /// Sua implementação deverá passar em todos os casos de teste definidos pelo arquivo `test/challenge_test.dart`.
-/// 
+///
 /// Considerações:
 ///
 /// 1) Não é permitido usar nenhuma instrução de iteração da linguagem (ex. while, do/while ou for).
@@ -20,6 +20,17 @@
 ///
 /// Soluções que violarem as considerações supracitadas serão consideradas incorretas e não pontuarão.
 ///
+int compare(int a, int b) {
+  return a > b ? a : b;
+}
+
 int maxElement(List<int> data, int start, int end) {
-  throw UnimplementedError('Você deve implementar essa função');
+  if (end - start <= 1) {
+    return compare(data[start], data[end]);
+  } else {
+    int middle = (start + end) ~/ 2;
+    int x = maxElement(data, start, middle);
+    int y = maxElement(data, middle + 1, end);
+    return compare(x, y);
+  }
 }
