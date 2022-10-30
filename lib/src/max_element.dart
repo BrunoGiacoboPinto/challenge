@@ -48,11 +48,3 @@ int maxElement(List<int> data, int start, int end) {
     return math.max(leftMax, rightMax);
   }
 }
-
-/// Thrown when an empty list is provided since there is no how to find the maximum
-/// element inside a list with no elements.
-class EmptyListException implements Exception {}
-
-/// Thrown when invalid arguments related to the position of elements inside the
-/// iterable are provided.
-class ArgumentsOutOfRangeException implements Exception {}
