@@ -26,9 +26,13 @@ int maxElement(List<int> data, int start, int end) {
   final askedRangeLength = end - start + 1;
 
   if (data.isEmpty) {
-    throw EmptyListException();
-  } else if (start.isNegative || end.isNegative || end < start || data.length < askedRangeLength) {
-    throw ArgumentsOutOfRangeException();
+    throw ArgumentError.value(data, 'data', 'The data must be non-empty.');
+  } else if (start.isNegative || end.isNegative) {
+    throw ArgumentError('Both start and end indexes must be positive.');
+  } else if (end < start) {
+    throw ArgumentError('End index must be GRANDER than the start index.');
+  } else if (data.length < askedRangeLength) {
+    throw ArgumentError('The list must contain elements in the index range.');
   }
 
   // If the node is the closest as possible, for example, comparing only two elements.
